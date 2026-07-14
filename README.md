@@ -6,8 +6,8 @@ A collection of trained policy models for controlling the **NexArm** 6-DOF robot
 
 ```
 nexarm-policy-models/
-├── dit_v3/         # DiT + Flow Matching policy (current)
-├── act_v1/         # ACT policy (coming soon)
+├── dit_v3/         # DiT + Flow Matching policy
+├── act_v3/         # ACT policy (current)
 └── ...
 ```
 
@@ -16,7 +16,7 @@ nexarm-policy-models/
 | Policy | Method | Task | Training Data | HuggingFace Model |
 |--------|--------|------|--------------|-------------------|
 | `dit_v3` | DiT + Flow Matching | Pick and Place | 30 episodes, hand-collected | [CypherChen/nexarm_dit_v3](https://huggingface.co/CypherChen/nexarm_dit_v3) |
-| `act_v1` | ACT | Pick and Place | (coming soon) | |
+| `act_v3` | ACT | Pick and Place | 30 episodes, hand-collected | [CypherChen/nexarm_act_v3](https://huggingface.co/CypherChen/nexarm_act_v3) |
 
 > Large model weights (`.safetensors`) are hosted on HuggingFace Hub due to GitHub file size limits. Each policy folder contains a `model_link.md` with the exact HF repository link.
 
@@ -53,9 +53,17 @@ nexarm-policy-models/
 | Training Steps | 20,000 |
 | Optimizer | Adam (lr=2e-5) |
 
-#### act_v1 — ACT (Action Chunking with Transformers)
+#### act_v3 — ACT (Action Chunking with Transformers)
 
-(To be added)
+| Parameter | Value |
+|-----------|-------|
+| Architecture | ACT (CVAE + Transformer) |
+| Chunk Size | 100 |
+| N Action Steps | 100 |
+| N Obs Steps | 1 |
+| Batch Size | 32 |
+| Training Steps | 100,000 |
+| Optimizer | Adam (lr=1e-4) |
 
 ## Citation
 
