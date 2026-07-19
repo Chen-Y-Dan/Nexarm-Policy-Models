@@ -1,7 +1,7 @@
 {
     "dataset": {
-        "repo_id": "local/pick_and_place_v3",
-        "root": "/home/fengliuhao/yifanChen/data0712_pick_and_place_v3",
+        "repo_id": "local/PickPlace_v4",
+        "root": "/home/fengliuhao/yifanChen/PickPlace_v4/data/PickPlace_v4",
         "episodes": null,
         "image_transforms": {
             "enable": false,
@@ -153,7 +153,7 @@
         "optimizer_lr_backbone": 1e-05
     },
     "reward_model": null,
-    "output_dir": "outputs/train/nexarm_act_v3",
+    "output_dir": "outputs/train/PickPlace_ACT_v4",
     "job_name": "act",
     "resume": false,
     "seed": 1000,
@@ -167,7 +167,7 @@
     "log_freq": 1000,
     "tolerance_s": 0.0001,
     "save_checkpoint": true,
-    "save_freq": 25000,
+    "save_freq": 10000,
     "use_policy_training_preset": true,
     "optimizer": {
         "type": "adamw",
