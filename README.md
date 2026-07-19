@@ -6,18 +6,20 @@ A collection of trained policy models for controlling the **NexArm** 6-DOF robot
 
 ```
 nexarm-policy-models/
-├── dit_v3/         # DiT + Flow Matching policy
-└── act_v4/         # ACT policy
+├── PickPlace_DiT_v3.1/   # DiT + Flow Matching policy
+└── PickPlace_ACT_v4/     # ACT policy
 ```
 
 ## Policies Overview
 
 | Policy | Method | Task | Training Data | HuggingFace Model |
 |--------|--------|------|--------------|-------------------|
-| `dit_v3` | DiT + Flow Matching | Pick and Place | 30 episodes | [CypherChen/nexarm_dit_v3](https://huggingface.co/CypherChen/nexarm_dit_v3) |
-| `act_v4` | ACT | Put object into box | 60 episodes, varied positions | — |
+| `PickPlace_DiT_v3.1` | DiT + Flow Matching | Pick and Place | 30 episodes | [CypherChen/nexarm_dit_v3](https://huggingface.co/CypherChen/nexarm_dit_v3) |
+| `PickPlace_ACT_v4` | ACT | Put object into box | 60 episodes, varied positions | — |
 
 > Model weights (`.safetensors`) are hosted on HuggingFace Hub. Each policy folder contains a README with training details.
+>
+> **Naming**: `{Task}_{Algorithm}_{DataVersion}[.RetrainCount]` — e.g. `PickPlace_ACT_v4`.
 
 ## Hardware
 
